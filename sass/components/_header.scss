@@ -2,13 +2,28 @@ header {
   border-bottom: 1px solid #f5f5f5;
 }
 
-nav {
-  display: flex;
-}
+.menu-btn {
+  display: inline-flex;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background-color: transparent;
 
-.page-header__main-nav {
-  display: flex;
-  align-items: center;
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+
+  & .icon-cross {
+    display: none;
+  }
+
+  &.is-open .icon-cross {
+    display: block;
+  }
+
+  &.is-open .icon-menu {
+    display: none;
+  }
 }
 
 .page-header__logo {
@@ -29,14 +44,55 @@ nav {
   color: $accent-second;
 }
 
+.page-header__main-nav {
+  @media screen and (max-width: 767px) {
+    position: relative;
+  }
+
+  @media screen and (min-width: $tablet) {
+    display: flex;
+  }
+}
+
+.page-heder__burger-controls {
+  @media screen and (max-width: 767px) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.page-header__burger-menu {
+  @media screen and (max-width: 767px) {
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 796px;
+    padding-left: 40px;
+    background-color: $main-color;
+  }
+
+  &.is-open {
+    display: block;
+  }
+
+  @media screen and (min-width: $tablet) {
+    display: flex;
+  }
+}
+
 .site-nav {
+  @media screen and (max-width: 767px) {
+    display: block;
+    margin-left: 0;
+    margin-bottom: 306px;
+    letter-spacing: 0.02em;
+    font-size: 40px;
+    line-height: 1.2;
+  }
   display: flex;
   margin-left: 93px;
   align-items: center;
-}
-
-.site-nav,
-.site-contacts {
   letter-spacing: 0.02em;
   font-weight: 500;
   font-size: 14px;
@@ -44,11 +100,15 @@ nav {
 }
 
 .site-nav__item:not(:last-child) {
-  margin-right: 50px;
+  @media screen and (max-width: 767px) {
+    margin-bottom: 32px;
+  }
+  @media screen and (min-width: $tablet) {
+    margin-right: 50px;
+  }
 }
 
 .site-nav__link {
-  padding: 32px 0;
   display: block;
   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition-property: color;
@@ -58,43 +118,65 @@ nav {
   &:focus {
     color: $accent-color;
   }
+  @media screen and (min-width: $tablet) {
+    padding: 32px 0;
+  }
 }
 
 .site-nav__link--current {
   position: relative;
   color: $accent-color;
+  @media screen and (min-width: $tablet) {
+    &::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      display: block;
+      width: 100%;
+      height: 4px;
+      border-radius: 2px;
+      background-color: $accent-color;
+      scale: 1;
+      transition: scale 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
 
-  &::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    display: block;
-    width: 100%;
-    height: 4px;
-    border-radius: 2px;
-    background-color: $accent-color;
-    scale: 1;
-    transition: scale 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  }
-
-  &:hover::after,
-  &:focus::after {
-    scale: 1.3;
+    &:hover::after,
+    &:focus::after {
+      scale: 1.3;
+    }
   }
 }
 
 .site-contacts {
+  @media screen and (max-width: 767px) {
+    display: block;
+    margin-bottom: 64px;
+    letter-spacing: 0.02em;
+    font-size: 40px;
+    line-height: 1.2;
+  }
   display: flex;
   align-items: center;
-  margin-left: auto;
+  letter-spacing: 0.02em;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.1;
 }
 
 .site-contacts__item:not(:last-child) {
-  margin-right: 50px;
+  @media screen and (max-width: 767px) {
+    margin-bottom: 32px;
+  }
+  @media screen and (min-width: $tablet) {
+    margin-right: 50px;
+  }
 }
 
 .site-contacts__link {
+  @media screen and (max-width: 767px) {
+    padding: 0;
+  }
   color: $site-contacts-color;
   padding: 32px 0;
   display: flex;
@@ -109,6 +191,38 @@ nav {
 }
 
 .site-contacts__icon {
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
   margin-right: 10px;
   fill: currentColor;
+}
+
+.burger-social {
+  @media screen and (min-width: $tablet) {
+    display: none;
+  }
+  display: flex;
+}
+
+.burger-social__item {
+  display: flex;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.2;
+  letter-spacing: 0.02;
+}
+
+.burger-social__item:not(:last-child)::after {
+  content: '';
+  display: block;
+  width: 1px;
+  height: 22px;
+  margin-left: 10px;
+  margin-right: 10px;
+  background-color: rgba(33, 33, 33, 0.2);
+}
+
+.burger-social__link {
+  color: $accent-color;
 }

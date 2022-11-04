@@ -1,6 +1,7 @@
 .hero {
   max-width: 1600px;
-  height: 600px;
+  padding-top: 118px;
+  padding-bottom: 118px;
   margin-right: auto;
   margin-left: auto;
   background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
@@ -11,20 +12,35 @@
   color: $main-color;
   background-color: $back-color-first;
   text-align: center;
-  padding-top: 200px;
-  padding-bottom: 200px;
+
+  @media screen and (min-width: 1200px) {
+    padding-top: 200px;
+    padding-bottom: 200px;
+  }
 }
 
 .hero__title {
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 30px;
-  width: 696px;
   font-weight: 900;
-  font-size: 44px;
   line-height: 1.4;
   letter-spacing: 0.06em;
   text-transform: uppercase;
+  width: 360px;
+  font-size: 26px;
+  line-height: 1.6;
+
+  @media screen and (mix-width: 1200px) {
+    width: 360px;
+    font-size: 26px;
+    line-height: 1.6;
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: 696px;
+    font-size: 44px;
+  }
 }
 
 .button {
@@ -79,20 +95,34 @@
 }
 
 .modal {
-  position: absolute;
-  top: 50%;
-  left: 50%;
   transform: translate(-50%, -50%);
-  width: 528px;
-  height: 581px;
-  padding: 40px;
   background-color: $bcg-body;
+  width: 450px;
+  height: 609px;
+  padding: 40px;
   border-radius: 4px;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   scale: 1;
   transition-property: scale;
   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  @media screen and (max-width: 767px) {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+  }
+  @media screen and (min-width: $tablet) {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+  }
+  @media screen and (min-width: $desktop) {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 528px;
+    height: 581px;
+  }
 }
 
 .modal__button {
@@ -211,6 +241,11 @@ textarea {
   line-height: 1.7;
   letter-spacing: 0.03em;
   color: $site-contacts-color;
+  @media screen and (max-width: $desktop) {
+    font-size: 12px;
+    line-height: 1.6;
+    letter-spacing: 0.01em;
+  }
 }
 
 .check__contract {

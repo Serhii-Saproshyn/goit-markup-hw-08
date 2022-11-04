@@ -12,9 +12,20 @@ address {
 }
 
 .page-footer {
-  display: flex;
-  gap: 70px;
-  align-items: baseline;
+  @media screen and (max-width: 767px) {
+    text-align: center;
+  }
+  @media screen and (min-width: $tablet) {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    text-align: center;
+  }
+  @media screen and (min-width: $desktop) {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+  }
 }
 
 .page-footer__logo {
@@ -35,8 +46,13 @@ address {
   color: $main-color;
 }
 
-.page-footer__contacts li:not(:last-child) {
-  margin-bottom: 9px;
+.page-footer__contacts {
+  & li:not(:last-child) {
+    margin-bottom: 9px;
+  }
+  @media screen and (max-width: 767px) {
+    margin-bottom: 60px;
+  }
 }
 
 .page-footer__link {
@@ -74,6 +90,10 @@ address {
 .page-footer__social-list {
   display: flex;
   gap: 10px;
+  @media screen and (max-width: 767px) {
+    justify-content: center;
+    margin-bottom: 60px;
+  }
 }
 
 .page-footer__link-third {
@@ -96,7 +116,13 @@ address {
 
 .page-footer__form {
   display: flex;
-  align-items: flex-end;
+  @media screen and (min-width: $desktop) {
+    align-items: flex-end;
+  }
+  @media screen and (max-width: 767px) {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 }
 
 .page-footer__field {
@@ -115,6 +141,9 @@ address {
   & input:hover::placeholder,
   & input:focus::placeholder {
     color: $accent-color;
+  }
+  @media screen and (max-width: 767px) {
+    margin-bottom: 20px;
   }
 }
 

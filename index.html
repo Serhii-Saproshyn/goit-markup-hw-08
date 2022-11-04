@@ -15,43 +15,90 @@
     />
     <link rel="stylesheet" href="./css/main.min.css" />
   </head>
-
   <body>
     <header class="page-header">
       <div class="container page-header__main-nav">
-        <nav>
+        <div class="page-heder__burger-controls">
           <a lang="en" class="page-header__logo page-header__logo--header" href="./index.html"
             ><span class="page-header__logo-accent">Web</span
             ><span class="page-header__logo-accent-second">Studio</span></a
           >
-          <ul class="site-nav">
-            <li class="site-nav__item">
-              <a class="site-nav__link site-nav__link--current" href="./index.html">Студія</a>
+          <button type="button" class="menu-btn" aria-expanded="false" data-menu-button>
+            <svg width="40" height="40" aria-label="Перемикач мобільного меню">
+              <use class="icon-menu" href="./images/symbol-defs.svg#icon-mobile-menu"></use>
+              <use class="icon-cross" href="./images/symbol-defs.svg#icon-close-black"></use>
+            </svg>
+          </button>
+        </div>
+        <div class="page-header__burger-menu" data-menu>
+          <nav>
+            <ul class="site-nav">
+              <li class="site-nav__item">
+                <a class="site-nav__link site-nav__link--current" href="./index.html">Студія</a>
+              </li>
+              <li class="site-nav__item">
+                <a class="site-nav__link" href="./portfolio.html">Портфоліо</a>
+              </li>
+              <li class="site-nav__item"><a class="site-nav__link" href="">Контакти</a></li>
+            </ul>
+          </nav>
+          <ul class="site-contacts">
+            <li class="site-contacts__item">
+              <a class="site-contacts__link" href="tel:+380961111111"
+                ><svg width="10" height="16" class="site-contacts__icon">
+                  <use href="./images/symbol-defs.svg#icon-smartphone"></use>
+                </svg>
+                +38 096 111 11 11</a
+              >
             </li>
-            <li class="site-nav__item">
-              <a class="site-nav__link" href="./portfolio.html">Портфоліо</a>
+            <li class="site-contacts__item">
+              <a class="site-contacts__link" href="mailto:info@devstudio.com"
+                ><svg width="16" height="12" class="site-contacts__icon">
+                  <use href="./images/symbol-defs.svg#icon-envelope"></use>
+                </svg>
+                info@devstudio.com</a
+              >
             </li>
-            <li class="site-nav__item"><a class="site-nav__link" href="">Контакти</a></li>
           </ul>
-        </nav>
-        <ul class="site-contacts">
-          <li class="site-contacts__item">
-            <a class="site-contacts__link" href="mailto:info@devstudio.com"
-              ><svg width="16" height="12" class="site-contacts__icon">
-                <use href="./images/symbol-defs.svg#icon-envelope"></use>
-              </svg>
-              info@devstudio.com</a
-            >
-          </li>
-          <li class="site-contacts__item">
-            <a class="site-contacts__link" href="tel:+380961111111"
-              ><svg width="10" height="16" class="site-contacts__icon">
-                <use href="./images/symbol-defs.svg#icon-smartphone"></use>
-              </svg>
-              +38 096 111 11 11</a
-            >
-          </li>
-        </ul>
+          <ul class="burger-social">
+            <li class="burger-social__item">
+              <a
+                class="burger-social__link"
+                href="https://www.instagram.com/"
+                target="_blank"
+                rel="noopener noreferrer nofollow"
+                >Instagram</a
+              >
+            </li>
+            <li class="burger-social__item">
+              <a
+                class="burger-social__link"
+                href="https://twitter.com/"
+                target="_blank"
+                rel="noopener noreferrer nofollow"
+                >Twitter</a
+              >
+            </li>
+            <li class="burger-social__item">
+              <a
+                class="burger-social__link"
+                href="https://www.facebook.com/"
+                target="_blank"
+                rel="noopener noreferrer nofollow"
+                >Facebook</a
+              >
+            </li>
+            <li class="burger-social__item">
+              <a
+                class="burger-social__link"
+                href="https://www.linkedin.com/"
+                target="_blank"
+                rel="noopener noreferrer nofollow"
+                >LinkedIn</a
+              >
+            </li>
+          </ul>
+        </div>
       </div>
     </header>
     <main>
@@ -202,7 +249,7 @@
           <div class="post-card">
             <ul class="post-card__list">
               <li class="post-card__item">
-                <img src="./images/img3.jpg" alt="чоловік" width="270" />
+                <img src="./images/img3.jpg" alt="чоловік" width="450" />
                 <div class="post-card__description">
                   <h3 class="post-card__title">Ігор Дем'яненко</h3>
                   <p class="post-card__paragraph" lang="en">Product Designer</p>
@@ -251,7 +298,7 @@
                 </div>
               </li>
               <li class="post-card__item">
-                <img src="./images/img4.jpg" alt="жінка" width="270" />
+                <img src="./images/img4.jpg" alt="жінка" width="450" />
                 <div class="post-card__description">
                   <h3 class="post-card__title">Ольга Рєпіна</h3>
                   <p class="post-card__paragraph" lang="en">Frontend Developer</p>
@@ -300,7 +347,7 @@
                 </div>
               </li>
               <li class="post-card__item">
-                <img src="./images/img5.jpg" alt="чоловік" width="270" />
+                <img src="./images/img5.jpg" alt="чоловік" width="450" />
                 <div class="post-card__description">
                   <h3 class="post-card__title">Микола Тарасов</h3>
                   <p class="post-card__paragraph" lang="en">Marketing</p>
@@ -349,7 +396,7 @@
                 </div>
               </li>
               <li class="post-card__item">
-                <img src="./images/img6.jpg" alt="чоловік" width="270" />
+                <img src="./images/img6.jpg" alt="чоловік" width="450" />
                 <div class="post-card__description">
                   <h3 class="post-card__title">Михайло Єрмаков</h3>
                   <p class="post-card__paragraph" lang="en">UI Designer</p>
@@ -405,7 +452,7 @@
         <div class="container">
           <h2 class="clients__title">Постійні клієнти</h2>
           <ul class="clients__list">
-            <li>
+            <li class="clients__item">
               <a
                 href="https://goit.ua/"
                 target="_blank"
@@ -417,7 +464,7 @@
                 </svg>
               </a>
             </li>
-            <li>
+            <li class="clients__item">
               <a
                 href="https://goit.ua/"
                 target="_blank"
@@ -429,7 +476,7 @@
                 </svg>
               </a>
             </li>
-            <li>
+            <li class="clients__item">
               <a
                 href="https://goit.ua/"
                 target="_blank"
@@ -441,7 +488,7 @@
                 </svg>
               </a>
             </li>
-            <li>
+            <li class="clients__item">
               <a
                 href="https://goit.ua/"
                 target="_blank"
@@ -453,7 +500,7 @@
                 </svg>
               </a>
             </li>
-            <li>
+            <li class="clients__item">
               <a
                 href="https://goit.ua/"
                 target="_blank"
@@ -465,7 +512,7 @@
                 </svg>
               </a>
             </li>
-            <li>
+            <li class="clients__item">
               <a
                 href="https://goit.ua/"
                 target="_blank"
@@ -569,5 +616,6 @@
       </div>
     </footer>
     <script src="./js/modal.js"></script>
+    <script src="./js/mobile-menu.js"></script>
   </body>
 </html>
