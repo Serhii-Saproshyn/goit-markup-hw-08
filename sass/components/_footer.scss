@@ -17,7 +17,9 @@ address {
   }
   @media screen and (min-width: $tablet) {
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 60px;
     align-items: baseline;
     text-align: center;
   }
@@ -116,7 +118,12 @@ address {
 
 .page-footer__form {
   display: flex;
+  @media screen and (min-width: $tablet) {
+    flex-direction: column;
+    align-items: center;
+  }
   @media screen and (min-width: $desktop) {
+    flex-direction: row;
     align-items: flex-end;
   }
   @media screen and (max-width: 767px) {
@@ -142,7 +149,12 @@ address {
   & input:focus::placeholder {
     color: $accent-color;
   }
+
   @media screen and (max-width: 767px) {
+    width: 100%;
+  }
+
+  @media screen and (max-width: 1199px) {
     margin-bottom: 20px;
   }
 }
@@ -188,6 +200,9 @@ address {
 }
 
 .page-footer__form input {
+  @media screen and (max-width: 767px) {
+    width: 100%;
+  }
   width: 358px;
   height: 50px;
   padding-left: 16px;

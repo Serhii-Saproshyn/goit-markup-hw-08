@@ -1,5 +1,8 @@
-header {
+.page-header {
   border-bottom: 1px solid #f5f5f5;
+  @media screen and (min-width: $tablet) {
+    display: flex;
+  }
 }
 
 .menu-btn {
@@ -50,6 +53,10 @@ header {
   }
 
   @media screen and (min-width: $tablet) {
+    display: block;
+  }
+
+  @media screen and (min-width: $desktop) {
     display: flex;
   }
 }
@@ -66,8 +73,10 @@ header {
   @media screen and (max-width: 767px) {
     display: none;
     position: absolute;
-    width: 100%;
-    height: 796px;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
     padding-left: 40px;
     background-color: $main-color;
   }
@@ -84,8 +93,8 @@ header {
 .site-nav {
   @media screen and (max-width: 767px) {
     display: block;
-    margin-left: 0;
     margin-bottom: 306px;
+    margin-left: 0;
     letter-spacing: 0.02em;
     font-size: 40px;
     line-height: 1.2;
@@ -156,7 +165,15 @@ header {
     font-size: 40px;
     line-height: 1.2;
   }
+  @media screen and (min-width: $tablet) {
+    flex-direction: column;
+    justify-content: center;
+  }
+  @media screen and (min-width: $desktop) {
+    flex-direction: row;
+  }
   display: flex;
+  flex-direction: column;
   align-items: center;
   letter-spacing: 0.02em;
   font-weight: 500;
@@ -169,12 +186,15 @@ header {
     margin-bottom: 32px;
   }
   @media screen and (min-width: $tablet) {
-    margin-right: 50px;
+    margin-bottom: 10px;
   }
 }
 
 .site-contacts__link {
   @media screen and (max-width: 767px) {
+    padding: 0;
+  }
+  @media screen and (min-width: $tablet) {
     padding: 0;
   }
   color: $site-contacts-color;

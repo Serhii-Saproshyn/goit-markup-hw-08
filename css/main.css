@@ -63,8 +63,13 @@ img {
   text-transform: uppercase;
 }
 
-header {
+.page-header {
   border-bottom: 1px solid #f5f5f5;
+}
+@media screen and (min-width: 768px) {
+  .page-header {
+    display: flex;
+  }
 }
 
 .menu-btn {
@@ -114,6 +119,11 @@ header {
 }
 @media screen and (min-width: 768px) {
   .page-header__main-nav {
+    display: block;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .page-header__main-nav {
     display: flex;
   }
 }
@@ -130,8 +140,10 @@ header {
   .page-header__burger-menu {
     display: none;
     position: absolute;
-    width: 100%;
-    height: 796px;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
     padding-left: 40px;
     background-color: #ffffff;
   }
@@ -157,8 +169,8 @@ header {
 @media screen and (max-width: 767px) {
   .site-nav {
     display: block;
-    margin-left: 0;
     margin-bottom: 306px;
+    margin-left: 0;
     letter-spacing: 0.02em;
     font-size: 40px;
     line-height: 1.2;
@@ -216,6 +228,7 @@ header {
 
 .site-contacts {
   display: flex;
+  flex-direction: column;
   align-items: center;
   letter-spacing: 0.02em;
   font-weight: 500;
@@ -231,6 +244,17 @@ header {
     line-height: 1.2;
   }
 }
+@media screen and (min-width: 768px) {
+  .site-contacts {
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .site-contacts {
+    flex-direction: row;
+  }
+}
 
 @media screen and (max-width: 767px) {
   .site-contacts__item:not(:last-child) {
@@ -239,7 +263,7 @@ header {
 }
 @media screen and (min-width: 768px) {
   .site-contacts__item:not(:last-child) {
-    margin-right: 50px;
+    margin-bottom: 10px;
   }
 }
 
@@ -252,6 +276,11 @@ header {
   transition-property: color;
 }
 @media screen and (max-width: 767px) {
+  .site-contacts__link {
+    padding: 0;
+  }
+}
+@media screen and (min-width: 768px) {
   .site-contacts__link {
     padding: 0;
   }
@@ -307,13 +336,38 @@ header {
   padding-bottom: 118px;
   margin-right: auto;
   margin-left: auto;
-  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/bcghero.jpg);
+  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/bcghero-480.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   color: #ffffff;
   background-color: #2f303a;
   text-align: center;
+}
+@media screen and (min-device-pixel-ratio: 2), screen and (min-resolution: 192dpi), screen and (min-resolution: 2dppx) {
+  .hero {
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/bcghero-960.jpg);
+  }
+}
+@media screen and (min-width: 768px) {
+  .hero {
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/bcghero-768.jpg);
+  }
+}
+@media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
+  .hero {
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/bcghero-1536.jpg);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .hero {
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/bcghero-1600.jpg);
+  }
+}
+@media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
+  .hero {
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/bcghero-3200.jpg);
+  }
 }
 @media screen and (min-width: 1200px) {
   .hero {
@@ -330,7 +384,7 @@ header {
   line-height: 1.4;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  width: 360px;
+  width: 100%;
   font-size: 26px;
   line-height: 1.6;
 }
@@ -398,7 +452,6 @@ header {
 }
 
 .modal {
-  transform: translate(-50%, -50%);
   background-color: #ffffff;
   width: 450px;
   height: 609px;
@@ -412,15 +465,17 @@ header {
 @media screen and (max-width: 767px) {
   .modal {
     position: absolute;
-    top: 50%;
+    top: 93px;
     left: 50%;
+    transform: translateX(-50%);
   }
 }
 @media screen and (min-width: 768px) {
   .modal {
     position: absolute;
-    top: 50%;
+    top: 208px;
     left: 50%;
+    transform: translateX(-50%);
   }
 }
 @media screen and (min-width: 1200px) {
@@ -430,6 +485,7 @@ header {
     left: 50%;
     width: 528px;
     height: 581px;
+    transform: translate(-50%, -50%);
   }
 }
 
@@ -648,7 +704,7 @@ textarea {
 }
 
 .features__item {
-  width: 450px;
+  width: 100%;
 }
 @media screen and (max-width: 767px) {
   .features__item:not(:last-child) {
@@ -671,7 +727,7 @@ textarea {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 450px;
+  width: 100%;
   height: 120px;
   background-color: #f5f4fa;
   border-radius: 4px;
@@ -802,7 +858,7 @@ textarea {
 }
 
 .post-card__item {
-  width: 450px;
+  width: 100%;
   background-color: #ffffff;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
@@ -823,6 +879,10 @@ textarea {
     margin: 15px;
     width: calc((100% - 120px) / 4);
   }
+}
+
+.post-card__img {
+  width: 100%;
 }
 
 .post-card__description {
@@ -953,7 +1013,9 @@ address {
 @media screen and (min-width: 768px) {
   .page-footer {
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 60px;
     align-items: baseline;
     text-align: center;
   }
@@ -1051,8 +1113,15 @@ address {
 .page-footer__form {
   display: flex;
 }
+@media screen and (min-width: 768px) {
+  .page-footer__form {
+    flex-direction: column;
+    align-items: center;
+  }
+}
 @media screen and (min-width: 1200px) {
   .page-footer__form {
+    flex-direction: row;
     align-items: flex-end;
   }
 }
@@ -1077,6 +1146,11 @@ address {
   color: #2196f3;
 }
 @media screen and (max-width: 767px) {
+  .page-footer__field {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 1199px) {
   .page-footer__field {
     margin-bottom: 20px;
   }
@@ -1132,6 +1206,11 @@ address {
   border: 1px solid rgba(255, 255, 255, 0.3);
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
+}
+@media screen and (max-width: 767px) {
+  .page-footer__form input {
+    width: 100%;
+  }
 }
 
 .examples {
