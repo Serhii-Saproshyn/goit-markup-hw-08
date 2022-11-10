@@ -1,6 +1,10 @@
 .examples {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  @media screen and (min-width: $desktop) {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 }
 
 .examples__title--visually-hidden {
@@ -18,14 +22,20 @@
 
 .examples__list {
   display: flex;
-  justify-content: center;
-  margin-right: auto;
-  margin-left: auto;
-  margin-bottom: 50px;
-}
-
-.examples__item:not(:last-child) {
-  margin-right: 8px;
+  gap: 8px;
+  @media screen and (max-width: 767px) {
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+  }
+  @media screen and (min-width: $tablet) {
+    justify-content: center;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 30px;
+  }
+  @media screen and (min-width: $desktop) {
+    margin-bottom: 50px;
+  }
 }
 
 .examples__button {
@@ -51,14 +61,38 @@
 }
 
 .examples-container {
-  display: flex;
-  flex-wrap: wrap;
-  margin: -15px;
+  @media screen and (max-width: 767px) {
+    width: 100%;
+  }
+
+  @media screen and (min-width: $tablet) {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -15px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -15px;
+  }
 }
 
 .examples-container__item {
-  width: 370px;
-  margin: 15px;
+  @media screen and (max-width: 767px) {
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+  }
+  @media screen and (min-width: $tablet) {
+    width: 354px;
+    margin: 15px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    width: 370px;
+    margin: 15px;
+  }
 }
 
 .examples-container__link {

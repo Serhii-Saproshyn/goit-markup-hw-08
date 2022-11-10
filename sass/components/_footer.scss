@@ -12,8 +12,8 @@ address {
 }
 
 .page-footer {
+  text-align: center;
   @media screen and (max-width: 767px) {
-    text-align: center;
   }
   @media screen and (min-width: $tablet) {
     display: flex;
@@ -21,12 +21,12 @@ address {
     justify-content: space-around;
     gap: 60px;
     align-items: baseline;
-    text-align: center;
   }
   @media screen and (min-width: $desktop) {
     display: flex;
     justify-content: space-between;
     align-items: baseline;
+    text-align: start;
   }
 }
 
@@ -163,7 +163,6 @@ address {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-left: 12px;
   width: 200px;
   height: 50px;
   font-weight: 700;
@@ -176,12 +175,17 @@ address {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border: none;
   border-radius: 4px;
+  cursor: pointer;
   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition-property: background-color;
 
   &:hover,
   &:focus {
     background-color: $back-main-button;
+  }
+
+  @media screen and (min-width: $desktop) {
+    margin-left: 12px;
   }
 }
 

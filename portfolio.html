@@ -24,30 +24,31 @@
             ><span class="page-header__logo-accent">Web</span
             ><span class="page-header__logo-accent-second">Studio</span></a
           >
-          <button type="button" class="menu-btn" aria-expanded="false" data-menu-button>
+          <button type="button" class="menu-toggle js-open-menu" aria-expanded="false">
             <svg width="40" height="40" aria-label="Перемикач мобільного меню">
               <use class="icon-menu" href="./images/symbol-defs.svg#icon-mobile-menu"></use>
             </svg>
           </button>
         </div>
-
-        <div class="page-header__burger-menu" data-menu>
-          <button type="button" class="menu-btn" aria-expanded="false" data-menu-button>
-            <svg width="40" height="40" aria-label="Перемикач мобільного меню">
-              <use class="icon-cross" href="./images/symbol-defs.svg#icon-close-black"></use>
-            </svg>
-          </button>
+        <div class="page-header__burger-menu js-menu-container" data-menu>
           <nav>
             <ul class="site-nav">
               <li class="site-nav__item">
-                <a class="site-nav__link site-nav__link--current" href="./index.html">Студія</a>
+                <a class="site-nav__link" href="./index.html">Студія</a>
               </li>
               <li class="site-nav__item">
-                <a class="site-nav__link" href="./portfolio.html">Портфоліо</a>
+                <a class="site-nav__link site-nav__link--current" href="./portfolio.html"
+                  >Портфоліо</a
+                >
               </li>
               <li class="site-nav__item"><a class="site-nav__link" href="">Контакти</a></li>
             </ul>
           </nav>
+          <button type="button" class="menu-toggle js-close-menu">
+            <svg width="40" height="40" fill="currentcolor" aria-label="Перемикач мобільного меню">
+              <use class="icon-cross" href="./images/symbol-defs.svg#icon-close"></use>
+            </svg>
+          </button>
           <ul class="site-contacts">
             <li class="site-contacts__item">
               <a class="site-contacts__link" href="tel:+380961111111"
@@ -143,12 +144,22 @@
                       приватну особу.
                     </p>
                   </div>
-                  <img
-                    class="examples-picture"
-                    src="./images/pf1img.jpg"
-                    alt="приклад на ноутбуці"
-                    width="370"
-                  />
+                  <picture>
+                    <source
+                      srcset="./images/pf1-370.jpg 1x, ./images/pf1-740.jpg 2x"
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="./images/pf1-354.jpg 1x, ./images/pf1-708.jpg 2x"
+                      media="(min-width: 768px)"
+                    />
+                    <img
+                      class="examples-picture"
+                      src="./images/pf1-450.jpg"
+                      srcset="./images/pf1-450.jpg 1x, ./images/pf1-900.jpg 2x"
+                      alt="приклад на ноутбуці"
+                    />
+                  </picture>
                 </div>
                 <div class="examples-container__description">
                   <h2 class="examples-container__title">Технокряк</h2>
@@ -162,12 +173,22 @@
                   <div class="overlay">
                     <p lang="en" class="overlay__paragraph">Lorem ipsum dolor sit amet.</p>
                   </div>
-                  <img
-                    class="examples-picture"
-                    src="./images/pf2img.jpg"
-                    alt="приклад постеру баскетбол"
-                    width="370"
-                  />
+                  <picture>
+                    <source
+                      srcset="./images/pf2-370.jpg 1x, ./images/pf2-740.jpg 2x"
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="./images/pf2-354.jpg 1x, ./images/pf2-708.jpg 2x"
+                      media="(min-width: 768px)"
+                    />
+                    <img
+                      class="examples-picture"
+                      src="./images/pf2-450.jpg"
+                      srcset="./images/pf2-450.jpg 1x, ./images/pf2-900.jpg 2x"
+                      alt="постер"
+                    />
+                  </picture>
                 </div>
                 <div class="examples-container__description">
                   <h2 class="examples-container__title">
@@ -189,12 +210,22 @@
                       Lorem ipsum dolor sit amet, consectetur adipisicing.
                     </p>
                   </div>
-                  <img
-                    class="examples-picture"
-                    src="./images/pf3img.jpg"
-                    alt="логотип додаток ресторану"
-                    width="370"
-                  />
+                  <picture>
+                    <source
+                      srcset="./images/pf3-370.jpg 1x, ./images/pf3-740.jpg 2x"
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="./images/pf3-354.jpg 1x, ./images/pf3-708.jpg 2x"
+                      media="(min-width: 768px)"
+                    />
+                    <img
+                      class="examples-picture"
+                      src="./images/pf3-450.jpg"
+                      srcset="./images/pf3-450.jpg 1x, ./images/pf3-900.jpg 2x"
+                      alt="додаток ресторану"
+                    />
+                  </picture>
                 </div>
                 <div class="examples-container__description">
                   <h2 class="examples-container__title">
@@ -212,12 +243,22 @@
                       Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore, odit!
                     </p>
                   </div>
-                  <img
-                    class="examples-picture"
-                    src="./images/pf4img.jpg"
-                    alt="навушники"
-                    width="370"
-                  />
+                  <picture>
+                    <source
+                      srcset="./images/pf4-370.jpg 1x, ./images/pf4-740.jpg 2x"
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="./images/pf4-354.jpg 1x, ./images/pf4-708.jpg 2x"
+                      media="(min-width: 768px)"
+                    />
+                    <img
+                      class="examples-picture"
+                      src="./images/pf4-450.jpg"
+                      srcset="./images/pf4-450.jpg 1x, ./images/pf4-900.jpg 2x"
+                      alt="навушники"
+                    />
+                  </picture>
                 </div>
                 <div class="examples-container__description">
                   <h2 class="examples-container__title">
@@ -236,12 +277,22 @@
                       reiciendis et.
                     </p>
                   </div>
-                  <img
-                    class="examples-picture"
-                    src="./images/pf5img.jpg"
-                    alt="коробки"
-                    width="370"
-                  />
+                  <picture>
+                    <source
+                      srcset="./images/pf5-370.jpg 1x, ./images/pf5-740.jpg 2x"
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="./images/pf5-354.jpg 1x, ./images/pf5-708.jpg 2x"
+                      media="(min-width: 768px)"
+                    />
+                    <img
+                      class="examples-picture"
+                      src="./images/pf5-450.jpg"
+                      srcset="./images/pf5-450.jpg 1x, ./images/pf5-900.jpg 2x"
+                      alt="коробки"
+                    />
+                  </picture>
                 </div>
                 <div class="examples-container__description">
                   <h2 class="examples-container__title">
@@ -260,12 +311,22 @@
                       dolorum laudantium soluta molestias.
                     </p>
                   </div>
-                  <img
-                    class="examples-picture"
-                    src="./images/pf6img.jpg"
-                    alt="веб-сайт приклад на моніторі"
-                    width="370"
-                  />
+                  <picture>
+                    <source
+                      srcset="./images/pf6-370.jpg 1x, ./images/pf6-740.jpg 2x"
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="./images/pf6-354.jpg 1x, ./images/pf6-708.jpg 2x"
+                      media="(min-width: 768px)"
+                    />
+                    <img
+                      class="examples-picture"
+                      src="./images/pf6-450.jpg"
+                      srcset="./images/pf6-450.jpg 1x, ./images/pf6-900.jpg 2x"
+                      alt="веб-сайт на моніторі"
+                    />
+                  </picture>
                 </div>
                 <div class="examples-container__description">
                   <h2 class="examples-container__title" lang="en">
@@ -283,12 +344,22 @@
                       Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, quaerat rem.
                     </p>
                   </div>
-                  <img
-                    class="examples-picture"
-                    src="./images/pf7img.jpg"
-                    alt="розгорнута книжка"
-                    width="370"
-                  />
+                  <picture>
+                    <source
+                      srcset="./images/pf7-370.jpg 1x, ./images/pf7-740.jpg 2x"
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="./images/pf7-354.jpg 1x, ./images/pf7-708.jpg 2x"
+                      media="(min-width: 768px)"
+                    />
+                    <img
+                      class="examples-picture"
+                      src="./images/pf7-450.jpg"
+                      srcset="./images/pf7-450.jpg 1x, ./images/pf7-900.jpg 2x"
+                      alt="книга дизайн"
+                    />
+                  </picture>
                 </div>
                 <div class="examples-container__description">
                   <h2 class="examples-container__title" lang="en">
@@ -309,7 +380,22 @@
                       Lorem ipsum dolor sit amet consectetur adipisicing elit.
                     </p>
                   </div>
-                  <img class="examples-picture" src="./images/pf8img.jpg" alt="бірка" width="370" />
+                  <picture>
+                    <source
+                      srcset="./images/pf8-370.jpg 1x, ./images/pf8-740.jpg 2x"
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="./images/pf8-354.jpg 1x, ./images/pf8-708.jpg 2x"
+                      media="(min-width: 768px)"
+                    />
+                    <img
+                      class="examples-picture"
+                      src="./images/pf8-450.jpg"
+                      srcset="./images/pf8-450.jpg 1x, ./images/pf8-900.jpg 2x"
+                      alt="бірка"
+                    />
+                  </picture>
                 </div>
                 <div class="examples-container__description">
                   <h2 class="examples-container__title">
@@ -328,12 +414,22 @@
                       sunt reiciendis hic at nesciunt repudiandae porro perspiciatis quidem soluta?
                     </p>
                   </div>
-                  <img
-                    class="examples-picture"
-                    src="./images/pf9img.jpg"
-                    alt="людина працює за ноутбуком"
-                    width="370"
-                  />
+                  <picture>
+                    <source
+                      srcset="./images/pf9-370.jpg 1x, ./images/pf9-740.jpg 2x"
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="./images/pf9-354.jpg 1x, ./images/pf9-708.jpg 2x"
+                      media="(min-width: 768px)"
+                    />
+                    <img
+                      class="examples-picture"
+                      src="./images/pf9-450.jpg"
+                      srcset="./images/pf9-450.jpg 1x, ./images/pf9-900.jpg 2x"
+                      alt="бізнес-додаток"
+                    />
+                  </picture>
                 </div>
                 <div class="examples-container__description">
                   <h2 class="examples-container__title" lang="en">
