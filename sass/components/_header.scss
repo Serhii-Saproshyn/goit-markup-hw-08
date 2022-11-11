@@ -85,6 +85,7 @@
     overflow-y: scroll;
     z-index: 9;
     padding-left: 40px;
+    padding-right: 15px;
     background-color: $main-color;
   }
 
@@ -182,7 +183,7 @@
     display: block;
     margin-bottom: 64px;
     letter-spacing: 0.02em;
-    font-size: 32px;
+    font-size: 30px;
     line-height: 1.2;
   }
   @media screen and (min-width: $tablet) {
